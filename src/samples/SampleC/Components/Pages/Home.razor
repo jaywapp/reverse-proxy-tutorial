@@ -1,0 +1,29 @@
+@page "/"
+@rendermode InteractiveServer
+@inject NavigationManager Nav
+
+<PageTitle>Sample C</PageTitle>
+
+<div class="p-5 mb-4 rounded-3 text-white" style="background-color:#dc3545;">
+    <h1 class="display-4">Sample C</h1>
+    <p class="lead">This is the <strong>C</strong> Blazor Server application.</p>
+</div>
+
+<ul class="list-group mb-4">
+    <li class="list-group-item"><strong>App:</strong> SampleC</li>
+    <li class="list-group-item"><strong>BaseUri:</strong> @Nav.BaseUri</li>
+    <li class="list-group-item"><strong>Current URI:</strong> @Nav.Uri</li>
+</ul>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Interactivity check (SignalR through the portal)</h5>
+        <p>Counter: <strong>@count</strong></p>
+        <button class="btn btn-danger" @onclick="() => count++">Increment</button>
+        <p class="text-muted mt-2 mb-0">If this button works behind the portal, the Blazor circuit (WebSocket) is being proxied correctly.</p>
+    </div>
+</div>
+
+@code {
+    private int count;
+}

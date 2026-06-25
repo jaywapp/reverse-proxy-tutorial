@@ -1,0 +1,7 @@
+@inject IConfiguration Configuration
+@*
+    Renders <base href="/a/"> from the configured "PathBase".
+    Use this in App.razor instead of a hard-coded <base href="/">, so the app
+    works both standalone and behind the portal under "/a", "/b", ...
+*@
+<base href="@Configuration.GetBaseHref()" />

@@ -1,0 +1,22 @@
+## .NET / build artifacts
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+*.user
+*.suo
+
+## Publish output
+deploy/publish/
+publish/
+*.pubxml.user
+
+## IDE
+.vs/
+.idea/
+*.swp
+
+## Env / secrets
+.env
+.env.local
+.env.*.local

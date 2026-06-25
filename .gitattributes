@@ -1,0 +1,12 @@
+# Normalize line endings on commit; let git pick native on checkout.
+* text=auto
+
+# Scripts that should stay LF / CRLF as written
+*.ps1 text
+*.cs  text
+*.razor text
+*.json text
+*.md  text
+
+# Binary assets
+*.png binary
